@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    
+    <title>Responsive home interior Website</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+
+    <style>
+        *, html{
+  scroll-behavior: smooth;
+  }
+ 
+  :root{
+    --white:#FFF;
+    --black:#000;
+    --lite:rgba(255,255,255,0.6);
+    --gray:rgba(1,1,1,0.6);
+    --dark:#1e1e1d;
+    --primary:#d6863a;
+    --primary_lite:#ebab61;
+    --primary_dark:#93683f;
+    --default_font:'Nunito Sans', sans-serif;
+  }
+  
+
+
+
+
+body{
+  margin:0;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration:none;
+  min-width: fit-content;
+  width: fit-content;
+ 
+}
+
+a, button{
+  transition:0.5s;
+}
+
+em{
+  font-style:normal;
+  color:var(--primary_dark);
+}
+
+figure{
+  padding:0;
+  margin:0;
+}
+
+a, p, .btn{
+  font-size:15px;
+}
+
+p{
+  line-height:1.9em;
+  color:var(--gray);
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+}
+
+.title, .sub_title{
+  font-family:var(--title_font);
+  font-weight:800;
+  margin:0;
+}
+
+.flex, .fixed_flex{
+  display:flex;
+}
+
+.flex_content{
+  width:100%;
+  position:relative;
+}
+
+
+
+.padding_1x{
+  padding:1rem;
+}
+
+.padding_2x{
+  padding:2rem;
+}
+.padding_3x{
+  padding:3rem;
+}
+
+
+.padding_4x{
+  padding:4rem;
+}
+
+.big{
+  font-size:3.5em;
+}
+
+.medium{
+  font-size:2em;
+}
+
+.small{
+  font-size:1.3em;
+}
+
+.btn{
+  padding:0.6rem 1rem;
+  border-radius:5px;
+  position:relative;
+  border:0;
+  text-align:center;
+}
+.btn_1{
+  background:var(--primary);
+  color:var(--white);
+
+}
+
+.btn_1:hover{
+  opacity:0.8;
+}
+
+.btn_2{
+  background-color:var(--white);
+  color:var(--dark);
+}
+
+
+
+.btn_3{
+  display: block;
+  background-color:0;
+  color:var(--white);
+  position:relative;
+  font-family:var(--default_font);
+  font-weight:400;
+  text-transform:uppercase;
+}
+
+.btn_3:before{
+  content:"";
+  border-radius:50%;
+  background-color:rgba(255,255,255,0.2);
+  position:absolute;
+  left:0;
+  top:50%;
+  width:40px;
+  height:40px;
+  transition:0.5s;
+  transform:translate(0%, -50%);
+}
+
+.btn_3:after{
+  content:"\f178";
+  font-family:"FontAwesome";
+  margin-left:5px;
+}
+
+.btn_3:hover:before{
+  border-radius:40px;
+  width:100%;
+}
+
+.divisions{
+  position:relative;
+}
+
+.title_header{
+  margin:auto;
+  text-align:center;
+  width:60%;
+}
+
+
+
+.link-tag{
+  position:relative;
+}
+
+.link-tag:before{
+  content:"\f0da";
+  font-family:"FontAwesome";
+  margin-right:5px;
+  transition:0.5s;
+  color:var(--primary_dark);
+}
+
+.link-tag:hover:before{
+  margin-right:10px;
+  color:var(--black);
+}
+
+.link-tag:hover{
+  color:var(--primary_dark);
+}
+
+@media (max-width:920px){
+  .flex{
+      flex-wrap:wrap;
+  }
+
+  .padding_1x, .padding_2x, .padding_3x, .padding_4x{
+      padding:1rem;
+  }
+
+  .big{
+      font-size:1.8em;
+  }
+
+  .medium{
+      font-size:1.6em;
+  }
+
+  .small{
+      font-size:1.1em;
+  }
+
+  .btn{
+      padding:0.5rem 1rem;
+  }
+
+  a, p, .btn{
+      font-size:12px;
+  }
+
+  .title_header{
+      width:100%;
+  }
+}
+
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:1rem 2rem;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--white);
+  background-color:transparent;
+  z-index:999;
+  transition:0.5s;
+  
+}
+
+
+
+
+
+
+
+@media (max-width:920px){
+  nav{
+      padding:1rem;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:920px){
+  menu{
+      width:100%;
+  }
+}
+
+
+footer{
+  width:100%;
+  background-color:var(--dark);
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+@media (max-width:920px){
+  footer{
+      padding-top:2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+  width:100%;
+  background:linear-gradient(to right, var(--black) 10%, var(--gray) 50%, rgba(1,1,1,0.1) 100%), url("https://i.postimg.cc/pdJnpSFp/header.jpg");
+  background-size:cover;
+  background-position:bottom;
+  color:var(--white);
+}
+
+header article{
+  width:min(100%, 700px);
+  padding:10rem 2rem;
+}
+
+header article p{
+  color:var(--lite);
+}
+
+header article em{
+  color:var(--primary_lite);
+}
+
+@media (max-width:920px){
+  header{
+      background-size:cover;
+      background-position:bottom;
+  }
+
+ 
+}
+
+
+.division_1{
+  background-color:#1e1e1d;
+  color:white;
+}
+
+.division_1 figure{
+  width:100%;
+  position:relative;
+  margin:auto;
+}
+
+.division_1 figure img{
+  width:100%;
+  position:relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius:10px;
+}
+
+.division_1 figure:before{
+  content:"";
+  width:90%;
+  height:90%;
+  position:absolute;
+  left:-20px;
+  top:-20px;
+  background-color:var(--primary);
+  border-radius:10px;
+}
+
+.division_1 article p{
+  color:white;
+}
+
+
+
+
+
+
+@media (max-width:920px){
+  .division_1 figure img{
+      width:35%;
+  }
+
+  .division_1 figure:before{
+      width:30%;
+      height:95%;
+  }
+
+  .division_1 aside{
+      margin-top:2rem;
+  }
+}
+
+@media (max-width:520px){
+  .division_1 figure img{
+      width:100%;
+  }
+}
+
+
+.division_2 .flex_content:first-child{
+  width:60%;
+  text-align:center;
+}
+
+.division_2 figure{
+  width:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+.division_2 figure img{
+  width:100%;
+  object-fit:cover;
+}
+
+.division_2 .flex_content:first-child figure, .division_2 .flex_content:first-child figure img{
+  height:100%;
+}
+
+.division_2 .flex_content:first-child figure figcaption{
+  width:90%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background-color:var(--white);
+  color:var(--dark);
+  z-index:1;
+}
+
+.division_2 .cards{
+  flex-wrap: wrap;
+}
+
+
+
+.division_2 .cards .card img{
+  max-height:50vh;
+}
+
+
+
+
+
+@media (max-width:1420px){
+  .division_2 .cards .card img{
+      max-height:30vh;
+  }
+}
+
+@media (max-width:1180px){
+  .division_2{
+      flex-wrap:wrap;
+  }
+
+  .division_2 .flex_content:first-child{
+      width:100%;
+  }
+
+  .division_2 .flex_content:first-child figure img{
+      display:none;
+  }
+
+  .division_2 .flex_content:first-child figure figcaption{
+      position:relative;
+      width:100%;
+  }
+
+  .division_2 .cards .card img{
+      max-height:50vh;
+  }
+}
+
+
+@media (max-width:520px){
+  .division_2, .division_1{
+      padding:0 !important;
+  }
+
+ 
+  
+
+  .division_2 .cards .card img{
+      max-height:100%;
+      border-radius:10px;
+  }
+
+  
+  
+
+}
+
+.division_3 section{
+  width:100%;
+  border-radius:10px;
+  background-color:#fef8e8;
+  margin:auto;
+  justify-content:space-between;
+  box-shadow: rgba(1, 1, 1, 0.2) 3px 3px 6px 0px inset, rgba(1, 1, 1, 0.2) -3px -3px 6px 1px inset;
+}
+
+.division_3 figure{
+  width:200px;
+  margin-right:20px;
+}
+
+.division_3 figure img{
+  width:100%;
+  height:100%;
+}
+
+.division_3 .btn{
+  display: flex;
+}
+
+
+@media (max-width:1020px){
+  .division_3 figure{
+      width:100px;
+  }
+}
+
+@media (max-width:520px){
+  .division_3 figure{
+      width:80px;
+  }
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+ 
+       
+        
+
+<!--NAV-->
+<nav>
+  
+    
+    <a href="login.html"><button>login</button></a>
+    <a href="registration.html"><button>reg</button></a></h1>
+</nav>
+
+
+
+<!--HEADER-->
+<header>
+    <article>
+        <h1 class="title big"> <em>we</em> are <em>Design</em> Your home<em>.</em> </h1>
+        <p> Be faithful to your own taste, because nothing <em>you really like</em> is ever out of style.</p>
+        <a href="#More" class="btn btn_3">Explore more</a>
+        <a href="index.html" class="btn btn_3">look here</a>
+    </article>
+</header>
+
+
+<!--MAIN-->
+<main id="More">
+    <!--DIVISION_1-->
+    <div class="divisions division_1 flex padding_2x">
+      <section class="flex_content padding_2x">
+            <figure>
+              <img src="c:\Users\DELL\Documents\WhatsApp Image 2024-06-07 at 14.59.57_b9b023e5.jpg" alt="" loading="lazy" />
+            </figure>
+        </section>
+        <section class="flex_content padding_2x">
+            <article>
+                <h2 class="title medium">Let's make your Interior better.</h2>
+                <p>Interior designers make indoor spaces <em>functional, safe, and beautiful by determining space requirements and selecting essential and decorative items, such as colors, lighting, and materials.</em> They must be able to draw, read, and edit blueprints.
+                </p>
+                <aside class="fixed_flex">
+                    <span>
+                        <h4 class="title small">200+</h4>
+                        <p>New design's</p>
+                    </span>
+                    <span>
+                        <h4 class="title small">100+</h4>
+                        <p>projects</p>
+                    </span>
+                </aside>
+            </article>
+        </section>
+    </div>
+
+    <!--DIVISION_2-->
+    <div class="divisions division_2 flex padding_2x">
+        <section class="flex_content padding_2x">
+            <figure>
+                <img src="c:\Users\DELL\Documents\WhatsApp Image 2024-06-04 at 22.47.49_9ac3c55d.jpg" alt="" loading="lazy" />
+                <figcaption class="padding_1x">
+                    <h2 class="title medium"> What We Do?</h2>
+                    <p>As an interior designer, you'll work with colors, textures, furniture, lighting, and space. You could do the interior design for <em>homes, theaters, restaurants, bars, schools, hospitals, malls, airport terminals and more.</em></p>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="flex_content cards padding_2x flex">
+            <figure class="flex card">
+                <img src="c:\Users\DELL\Downloads\images (61).jpg" alt="" loading="lazy" />
+                <figcaption class="padding_2x">
+                    <h3 class="title small">it is one type of bedroom we will decorate the room with colour interiors and with<em> fournitures</em> tooooo</h3>
+                    
+                       
+                </figcaption>
+            </figure>
+            <figure class="flex card">
+                <figcaption class="padding_2x">
+                    <h3 class="title small">There are six basic types of kitchen layouts:<em> G-shaped, L-shaped, straight, parallel, U-shaped and island kitchen</em></h3>
+                    <p>A kitchen  room used<em>for cooking and food preparation </em>.</p>
+                </figcaption>
+                <img src="c:\Users\DELL\Downloads\images (63).jpg" alt="" loading="lazy" />
+            </figure>
+            <figure class="flex card">
+                <img src="c:\Users\DELL\Downloads\download (99).jpg" alt="" loading="lazy" />
+                <figcaption class="padding_2x">
+                    <h3 class="title small">hall......</h3>
+                    <p>Begin with a general overview of what the picture is or portrays, focusing first on an overview before providing details</p>
+                </figcaption>
+            </figure>
+            <figure class="flex card">
+                <figcaption class="padding_2x">
+                    <h3 class="title small">prayer room</h3>
+                    <p>A Prayer Room is an opportunity to draw aside, take time out and<em> meet with God</em>. It is a dedicated space where people can go to pray and seek God.</p>
+                </figcaption>
+                <img src="c:\Users\DELL\Downloads\images (65).jpg" alt="" loading="lazy" />
+            </figure>
+        </section>
+    </div>
+
+    <div class="divisions division_3 padding_4x">
+        <section class="flex padding_1x">
+        <figure>
+            <img src="https://i.postimg.cc/T3vfL3G3/div-3.png" alt="" loading="lazy" />
+        </figure>
+        <article>
+            <h3 class="title small">Recycle old furniture<em> to create Beautiful Furniture Items.</em></h3>
+            <p>We have a dedicated team to recyclewaste used furnitures to create new gadgets such as <b>wooden beds</b>, <b>Desktop Clocks</b>, <b>Wall Clocks</b>,<b>Pen Holders</b>, <b>Chop Boards</b>, <b>Decorative Items</b> & much more...</p>
+            <a href="contact us.html" class="btn btn_1">Contact us</a><br><br>
+            <a href="ideas.html" class="btn btn_1">share ur <em>ideas</em></a>
+        </article>
+        </section>
+    </div>
+</main>
+
+<!--FOOTER-->
+<footer class="flex">
+    <section class="flex_content padding_2x">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href="c:\Users\DELL\Documents\WhatsApp Video 2024-06-07 at 22.05.53_6262fbf3.mp4"><i class="fa fa-instagram"></i></a>
+       
+        <a href="c:\Users\DELL\Documents\WhatsApp Video 2024-06-07 at 22.09.52_d00548b0.mp4"><i class="fa fa-youtube"></i></a>
+    </section>
+    <section class="flex_content">
+       
+        <a href="about us.html">about founder</a>
+        
+        <a href="furniture store.html">furniture store</a>
+       
+    </section>
+    <section class="flex_content padding_1x">
+        <p>© 2024 desing your home || All rights reserved</p>
+    </section>
+</footer>
+
+
+
+
+ 
+</body>
+</html>

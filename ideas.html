@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+    body {
+    padding-top: 50px;
+    color: azure;
+}
+
+#ideasList {
+    margin-top: 20px;
+}
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+   </style>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="c:\Users\DELL\Documents\WhatsApp Video 2024-06-04 at 19.26.49_2ee33090.mp4" type="video/mp4">
+        
+    </video>
+
+    <script>
+        function validateForm() {
+    var idea = document.getElementById("idea").value;
+
+    if (idea.trim() === "") {
+        alert("Please enter an idea.");
+        return false;
+    }
+}
+
+    </script>
+    <div class="container">
+        <h1>Ideas Page</h1>
+        <form class="ideasForm"action="video.html" onsubmit="return validateForm(this)">
+            <div class="form-group">
+                <label for="idea">Enter Your Idea:</label>
+                <input type="text" class="form-control" id="idea" placeholder="Enter your idea">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <a href="video.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+        </form>
+        <div id="ideasList">
+            <!-- Ideas will be displayed here -->
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
